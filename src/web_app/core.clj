@@ -1,4 +1,5 @@
 (ns web-app.core
+  (:gen-class)
   (:require [ring.adapter.jetty :as jetty]
             [clojure.data.json :as json]
             [clojure.pprint :as pprint]
@@ -38,3 +39,6 @@
   (when-some [s @server]
     (.stop s)
     (reset! server nil)))
+
+(defn -main [& args]
+  (start-server))
