@@ -25,6 +25,9 @@
   "Generates native executable using GraalVM Native Image. Assumes uberjar already exists"
   (b/process {:command-args ["native-image"
                              "--features=clj_easy.graal_build_time.InitClojureClasses"
+                             "--initialize-at-build-time=org.slf4j.simple.SimpleLogger"
+                             "--initialize-at-build-time=org.slf4j.LoggerFactory"
+                             "--initialize-at-build-time=org.slf4j.simple.OutputChoice$1"
                              "-jar"
                              uber-file
                              native-file]}))
