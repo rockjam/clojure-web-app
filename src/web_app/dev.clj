@@ -7,7 +7,7 @@
 (comment
   (sync-deps) ;; reloads deps.edn
 
-  (def ds (jdbc/get-datasource {:dbtype "sqlite" :dbname "example"}))
+  (def ds (jdbc/get-datasource {:dbtype "sqlite" :dbname "./db/dev"}))
   (def ds-opts (jdbc/with-options ds {:builder-fn rs/as-unqualified-kebab-maps}))
 
   (jdbc/execute! ds ["drop table address"])
