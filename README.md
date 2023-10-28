@@ -4,13 +4,14 @@ Application to learn more about different Clojure libraries for building web ser
 
 Libraries used:
 
-* ring with Jetty server as a server
+* ring with Jetty as a server
 * compojure for routing
 * next.jdbc for database access with sqlite database
+* hiccup to render HTML
 
 ### Build and run
 
-Application is packaged as an Uber-JAR, and as a ative binary using GraalVM Native Image
+Application is packaged as an Uber-JAR, and as a native binary using GraalVM Native Image
 
 Build Uber-JAR: `clojure -T:build uber`, run: `java -jar target/app.jar db/prod`
 

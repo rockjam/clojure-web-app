@@ -14,4 +14,5 @@
            org.slf4j/slf4j-simple                 {:mvn/version "2.0.9"}
            hiccup/hiccup                          {:mvn/version "2.0.0-RC2"}}
  :aliases {:build {:deps       {io.github.clojure/tools.build {:git/tag "v0.9.6" :git/sha "8e78bcc"}}
-                   :ns-default build}}}
+                   :ns-default build}
+           :run   {:main-opts ["-m" "web-app.core"]}}}
